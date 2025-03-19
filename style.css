@@ -55,6 +55,17 @@ header {
   height: 200px;
 
   border-style: solid;
+  border-color: red;
+
+  display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+
+.addMeal{
+    height: 64px;
+    width: 64px;
+    cursor: pointer;
 }
 
 .cart-container {
