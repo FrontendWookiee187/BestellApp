@@ -14,34 +14,31 @@
     <link rel="stylesheet" href="styles/fonts.css" />
     <link rel="stylesheet" href="styles/standard.css" />
 
-    <title>BestellApp</title>
+    <title>Daniels Asia Restaurant</title>
   </head>
-  <body>
+  <body onload="init()">
+    <header></header>
 
+    <div class="main-wrapper">
+      <div id="hero-wrapper" class="hero-wrapper">
+        <div class="hero-pic"></div>
+      </div>
 
-        <header></header>
+      <h1>Daniels Asia Restaurant</h1>
+      <div class="ratings">4,5 Sterne</div>
+      <h2>Hauptspeisen</h2>
 
-        
-
-        <div class="main-wrapper">
-            
-            <div id="hero-wrapper" class="hero-wrapper">
-
-                <div class="hero-pic"></div>
-            </div>
-
-            <h1>BestellApp</h1>
-
-            <div id="content-wrapper" class="content-wrapper">
-
-            <div id="dishes-container" class="dishes-container"></div>
-            <div id="cart-container" class="cart-container"></div>
+      <div id="content-wrapper" class="content-wrapper">
+        <div id="cart-container" class="cart-container">
+          <div id="order" class="order">
+            <div id="orderedMeals" class="orderedMeals"></div>
+            <div id="totalSum" class="totalSum"></div>
+          </div>
         </div>
+        <div id="dishes-container" class="dishes-container"></div>
+      </div>
+    </div>
 
-
-
-        </div>
-
-<footer></footer>
+    <footer></footer>
   </body>
 </html>

@@ -1,51 +1,70 @@
-header{
-    max-width: 1920px;
-    height: 100px;
+header {
+  max-width: 1920px;
+  height: 100px;
 }
 
-.hero-wrapper{
+.hero-wrapper {
+  width: 100%;
+  height: 500px;
 
-    width: 100%;
-    height: 500px;
-
-    display: flex;
-    justify-content: center;
-    
-
+  display: flex;
+  justify-content: center;
 }
 
-.hero-pic{
+.hero-pic {
+  width: 800px;
+  height: 500px;
 
-    width: 800px;
-    height: 500px;
+  background-image: url(assets/img/hero.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 500px;
 
-
-
-    background-image: url(assets/img/hero.jpg);
-    background-repeat: no-repeat;
-    background-size: 100% 500px;
-
-    border-radius: 12px;
-
-
-
+  border-radius: 12px;
 }
 
-
-.main-wrapper{
-
-    max-width: 1920px;
-
+.main-wrapper {
+  max-width: 1920px;
 }
 
-.content-wrapper{
-    min-height: calc(100vh - 200px);
+.ratings{
 
+    margin-bottom: 24px;
 }
 
+.content-wrapper {
+  min-height: calc(100vh - 200px);
 
-footer{
+  display: flex;
+  flex-direction: row-reverse;
+}
 
-    max-width: 1920px;
-    height: 100px;
+.dishes-container {
+  min-height: calc(100vh - 200px);
+  min-width: calc(100% - 300px);
+
+  border-style: solid;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.dish {
+  width: 95%;
+  height: 200px;
+
+  border-style: solid;
+}
+
+.cart-container {
+  min-height: calc(100vh - 200px);
+  width: 300px;
+  border-style: solid;
+}
+
+footer {
+  max-width: 1920px;
+  height: 100px;
+  border-style: solid;
 }
