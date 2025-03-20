@@ -1,4 +1,18 @@
 .order{
     width: 100%;
     height: 100vh;
+
+    position: sticky;
+}
+
+
+.orderedMeals{
+
+    width: 80%;
+    height: 413px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
 }
