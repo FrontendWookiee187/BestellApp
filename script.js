@@ -1,5 +1,6 @@
 function init() {
   renderDishesGallery();
+  renderTotal(cartItems);
 }
 
 function renderDishesGallery() {
@@ -13,44 +14,52 @@ function addMealtoCart(i) {
   let addMealPriceValue = meals[i].price;
 
   let addMeal = { name: addMealNameValue, price: addMealPriceValue, amount: 1 };
-  let newItem = true
+  let newItem = true;
 
-for (let i = 0; i < cartItems.length; i++) {  
-
-  if(cartItems[i].name === addMeal.name){
-    cartItems[i].amount = cartItems[i].amount + 1;
-    cartItems[i].price = addMeal.price * cartItems[i].amount
-    newItem = false
-  }   
-}
-if (newItem === true) {
- cartItems.push(addMeal);  
-}
-
-document.getElementById("orderedMeals").innerHTML = orderedMealsTemplate(cartItems);
-renderTotal(cartItems);
-  
+  for (let i = 0; i < cartItems.length; i++) {
+    if (cartItems[i].name === addMeal.name) {
+      cartItems[i].amount = cartItems[i].amount + 1;
+      cartItems[i].price = addMeal.price * cartItems[i].amount;
+      newItem = false;
+    }
+  }
+  if (newItem === true) {
+    cartItems.push(addMeal);
   }
 
-function increase(i){
-
-  cartItems[i].amount = cartItems[i].amount + 1; 
-
-  console.log(cartItems[i].amount);
-
-  document.getElementById("orderedMeals").innerHTML = orderedMealsTemplate(cartItems);
-    
+  document.getElementById("orderedMeals").innerHTML =
+    orderedMealsTemplate(cartItems);
+  renderTotal(cartItems);
 }
 
-function decrease(i){
+function increase(i) {
+  cartItems[i].amount = cartItems[i].amount + 1;
+  cartItems[i].price = meals[i].price * cartItems[i].amount;
 
-  if (cartItems[i].amount <= 1){}
-  else{
+  document.getElementById("orderedMeals").innerHTML =
+    orderedMealsTemplate(cartItems);
 
-  cartItems[i].amount = cartItems[i].amount -1; 
-
-  console.log(cartItems[i].amount);
-
-  document.getElementById("orderedMeals").innerHTML = orderedMealsTemplate(cartItems);
+  renderTotal(cartItems);
 }
+
+function decrease(i) {
+  if (cartItems[i].amount <= 1) {
+  } else {
+    cartItems[i].amount = cartItems[i].amount - 1;
+    cartItems[i].price = meals[i].price * cartItems[i].amount;
+
+    document.getElementById("orderedMeals").innerHTML =
+      orderedMealsTemplate(cartItems);
+
+    renderTotal(cartItems);
+  }
+}
+
+function deleteItem(i) {
+  cartItems.splice(i, 1);
+  console.log(cartItems);
+
+  document.getElementById("orderedMeals").innerHTML =
+    orderedMealsTemplate(cartItems);
+  renderTotal(cartItems);
 }

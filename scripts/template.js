@@ -35,6 +35,8 @@ function orderedMealsTemplate(cartItems){
             <div id="orderedMealPrice${i}" class="orderedMeal">${cartItems[i].price.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'})}</div>
     
             </div>
+
+            <button id="delteDish${i}" onclick="(deleteItem(${i}))">Delete</button>
     
             </div>     `
             }
@@ -52,7 +54,9 @@ function renderTotal(cartItems){
     
 }
 
-document.getElementById("totalSum").innerHTML = totalPrice.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'});
+document.getElementById("totalSum").innerHTML = "Gesamt: " + totalPrice.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'});
 
 }
+
+
 
