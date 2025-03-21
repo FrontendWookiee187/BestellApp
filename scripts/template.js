@@ -14,20 +14,45 @@ function dishesGallery(i){
     `
 }
 
-function orderedMealsTemplate(i){
+function orderedMealsTemplate(cartItems){
 
-    return /*html*/`
-    <div id="meal${i}" class="meal">
+    let cart = ""
 
-        <div id="amountCounter${i}" class="amountCounter">${cartItems[i].amount}x</div>
+    for (let i = 0; i < cartItems.length; i++) {
 
-        <div id="orderedMealWrapper" class="orderedMealWrapper">
+        cart +=  /*html*/`
+        <div id="meal${i}" class="meal">
 
-        <div id="orderedMealName${i}" class="orderedMeal">${cartItems[i].name}</div>
-        <div id="orderedMealPrice${i}" class="orderedMeal">${cartItems[i].price.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'})}</div>
+            <button id="increase${i}" class="inDecrease" onclick="increase(${i})">+</button>
 
-        </div>
+            <div id="amountCounter${i}" class="amountCounter">${cartItems[i].amount}x</div>
 
-        </div>
-    `
+            <button id="decrease${i}" class="inDecrease" onclick="decrease(${i})">-</button>
+
+            <div id="orderedMealWrapper" class="orderedMealWrapper">
+    
+            <div id="orderedMealName${i}" class="orderedMeal">${cartItems[i].name}</div>
+            <div id="orderedMealPrice${i}" class="orderedMeal">${cartItems[i].price.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'})}</div>
+    
+            </div>
+    
+            </div>     `
+            }
+
+    return cart
 }
+
+function renderTotal(cartItems){
+
+    let totalPrice = 0;
+
+    for (let i = 0; i < cartItems.length; i++) {
+    
+        totalPrice += cartItems[i].price;
+    
+}
+
+document.getElementById("totalSum").innerHTML = totalPrice.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'});
+
+}
+

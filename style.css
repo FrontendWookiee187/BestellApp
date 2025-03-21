@@ -9,10 +9,13 @@ header {
 
   display: flex;
   justify-content: center;
+
+  flex-direction: column-reverse;
+    align-items: center;
 }
 
 .hero-pic {
-  width: 800px;
+  width: 95%;
   height: 500px;
 
   background-image: url(assets/img/hero.jpg);
@@ -20,6 +23,18 @@ header {
   background-size: 100% 500px;
 
   border-radius: 12px;
+}
+
+.profilePic{
+
+  width: 170px;
+  height: 200px;
+
+  background-image: url(assets/img/profile.jpg);
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  margin-top: -60px;
 }
 
 .main-wrapper {

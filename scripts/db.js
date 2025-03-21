@@ -1,3 +1,5 @@
+let cartItems = [];
+
 let meals=[
 
       {

@@ -1,52 +1,56 @@
-let cartItems = []
+function init() {
+  renderDishesGallery();
+}
 
-function init(){
+function renderDishesGallery() {
+  for (let i = 0; i < meals.length; i++) {
+    document.getElementById("dishes-container").innerHTML += dishesGallery(i);
+  }
+}
 
-    renderDishesGallery()
+function addMealtoCart(i) {
+  let addMealNameValue = meals[i].name;
+  let addMealPriceValue = meals[i].price;
+
+  let addMeal = { name: addMealNameValue, price: addMealPriceValue, amount: 1 };
+  let newItem = true
+
+for (let i = 0; i < cartItems.length; i++) {  
+
+  if(cartItems[i].name === addMeal.name){
+    cartItems[i].amount = cartItems[i].amount + 1;
+    cartItems[i].price = addMeal.price * cartItems[i].amount
+    newItem = false
+  }   
+}
+if (newItem === true) {
+ cartItems.push(addMeal);  
+}
+
+document.getElementById("orderedMeals").innerHTML = orderedMealsTemplate(cartItems);
+renderTotal(cartItems);
+  
+  }
+
+function increase(i){
+
+  cartItems[i].amount = cartItems[i].amount + 1; 
+
+  console.log(cartItems[i].amount);
+
+  document.getElementById("orderedMeals").innerHTML = orderedMealsTemplate(cartItems);
     
 }
 
+function decrease(i){
 
-function renderDishesGallery(){
+  if (cartItems[i].amount <= 1){}
+  else{
 
-    for (let i = 0; i < meals.length; i++) {
-        document.getElementById("dishes-container").innerHTML += dishesGallery(i)
-        
-        
-    }
+  cartItems[i].amount = cartItems[i].amount -1; 
+
+  console.log(cartItems[i].amount);
+
+  document.getElementById("orderedMeals").innerHTML = orderedMealsTemplate(cartItems);
 }
-
-function addMealtoCart(i){      
-    
-        // let addMealNameValueRef = document.getElementById(`dishName${i}`);
-        // let addMealPriceValueRef = document.getElementById(`dishPrice${i}`);
-
-        let addMealNameValue = meals[i].name;
-        let addMealPriceValue = meals[i].price;
-
-        let addMeal = {name: addMealNameValue, price: addMealPriceValue, amount:1}
-        
-        
-    
-        console.log(addMeal);
-        
-    
-    cartItems.push(addMeal);
-
-    document.getElementById("orderedMeals").innerHTML += orderedMealsTemplate(i)
-
-   
-    
 }
-
-
-// function amountCounter(i){
-
-//     if ( cartItems[i].amount == 1) {}
-//     else {
-//         cartItems[i].amount + 1
-//         document.getElementById("orderedMeals").innerHTML = `<div id="amountCounter${i}" class="amountCounter">${cartItems[i].amount}x</div>`
-
-//     }
-// }
- 

@@ -3,6 +3,7 @@
     height: 100vh;
 
     position: sticky;
+    top: 0;
 }
 
 
@@ -15,4 +16,10 @@
     flex-direction: column;
     justify-content: center;
 
+}
+
+.totalSum{
+
+    width: 100%;
+    height: 100px;
 }
