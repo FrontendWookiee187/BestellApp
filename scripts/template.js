@@ -55,7 +55,7 @@ function renderTotal(cartItems){
 }
 
 document.getElementById("totalSum").innerHTML = "Gesamt: " + totalPrice.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'});
-
+document.getElementById("responsiveBtn").innerHTML = "Warenkorb (" + totalPrice.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'})+ ")";
 }
 
 

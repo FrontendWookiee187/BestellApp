@@ -64,12 +64,6 @@ function deleteItem(i) {
   renderTotal(cartItems);
 }
 
-// function closeOverlay(){
-//   let hideOverlay = document.getElementById("overlay");
-  
-//   hideOverlay.classList.toggle("d_none");
-//   }
-
 function on() {
   document.getElementById("overlay").style.display = "block";
 }
@@ -77,9 +71,6 @@ function on() {
 function off() {
   document.getElementById("overlay").style.display = "none";
 } 
-
-
-
 
   function mealsInResponsiveCart(cartItems){
     let cartContentNormal = document.getElementById('order');

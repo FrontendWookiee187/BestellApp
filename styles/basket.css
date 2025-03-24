@@ -106,6 +106,9 @@
     .responsiveBtn{
         display: flex;
         cursor: pointer;
+
+        position: fixed;
+        bottom: 0;
       }
       
     
