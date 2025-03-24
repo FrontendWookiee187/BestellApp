@@ -183,14 +183,18 @@ h1{
     display: none;
     background-color: rgb(255, 165, 0);
     width: 80%;
-    height: 36px;
+    height: 64px;
     color: white;
-    display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 12px;
+
+    margin-top: 12px;
+    margin-bottom: 12px;
     
 }
+
+
 
 
 

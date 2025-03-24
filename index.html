@@ -25,6 +25,12 @@
       <span>Daniels Asia Restaurant</span>
     </header>
 
+    <div id="overlay" class="overlay" onload="mealsInResponsiveCart()">
+      <button class="overlayCloseBtn" onclick="off()">X</button>
+        <div id="orderedMealsResponsive"></div>
+
+    </div>
+
     <div class="main-wrapper">
       <div id="hero-wrapper" class="hero-wrapper">
         <div class="profilePic"></div>
@@ -49,7 +55,7 @@
           </div>
         </div>
         <div id="dishes-container" class="dishes-container"></div>
-        <div class="responsiveBtn">
+        <div class="responsiveBtn" onclick="on(); mealsInResponsiveCart(cartItems)">
           <span>Warenkorb</span>
         </div>
       </div>
