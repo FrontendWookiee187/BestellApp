@@ -78,3 +78,14 @@ function off() {
     cartContentResponsive.innerHTML = cartContentNormal.innerHTML;
   }
 
+
+  function renderFromResponsiveCartToCart(cartItems){
+
+    document.getElementById("orderedMealsResponsive").innerHTML = ""
+    
+    document.getElementById("orderedMeals").innerHTML =
+    orderedMealsTemplate(cartItems);
+  renderTotal(cartItems);
+
+  }
+
