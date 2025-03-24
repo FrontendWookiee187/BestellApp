@@ -2,10 +2,10 @@ function dishesGallery(i){
 
     return /*html*/`
     <div id="dish${i + 1}" class="dish">
-        <button id="addMeal${i}" class="addMeal" onclick="addMealtoCart(${i})">Add</button>
+        <button id="addMeal${i}" class="addMeal" onclick="addMealtoCart(${i})" ><img src="assets/img/plus_icon_circle_transparent.png" alt=""></button>
         <div id="Properties${i}" class="Properties">
 
-        <div id="dishName${i}" class="dishName">${meals[i].name}</div>
+        <div id="dishName${i}" class="dishName"><h3>${meals[i].name}</h3></div>
         <div id="dishPrice${i}" class="dishName">${meals[i].price.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'})}</div>
         <div id="dishDescription${i}" class="dishName">${meals[i].description}</div>
 
@@ -23,11 +23,11 @@ function orderedMealsTemplate(cartItems){
         cart +=  /*html*/`
         <div id="meal${i}" class="meal">
 
-            <button id="increase${i}" class="inDecrease" onclick="increase(${i})">+</button>
+            <button id="increase${i}" class="inDecrease" onclick="increase(${i})"><img src="assets/img/plus_icon_transparent.png" alt=""></button>
 
             <div id="amountCounter${i}" class="amountCounter">${cartItems[i].amount}x</div>
 
-            <button id="decrease${i}" class="inDecrease" onclick="decrease(${i})">-</button>
+            <button id="decrease${i}" class="inDecrease" onclick="decrease(${i})"><img src="assets/img/minus_icon_transparent.png" alt=""></button>
 
             <div id="orderedMealWrapper" class="orderedMealWrapper">
     
@@ -36,7 +36,7 @@ function orderedMealsTemplate(cartItems){
     
             </div>
 
-            <button id="delteDish${i}" onclick="(deleteItem(${i}))">Delete</button>
+            <button id="delteDish${i}" onclick="(deleteItem(${i}))" class="deleteBTN"><img src="assets/img/delete_forever_.png" alt=""></button>
     
             </div>     `
             }
