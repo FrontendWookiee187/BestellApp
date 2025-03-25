@@ -30,27 +30,44 @@ header img{
 
 .hero-pic {
   width: 95%;
-  height: 500px;
+  height: 960px;
 
   background-image: url(assets/img/hero.jpg);
   background-repeat: no-repeat;
-  background-size: 100% 500px;
+  background-size: cover;
 
   border-radius: 12px;
+  object-fit: cover;
+  background-position: center;
+}
+
+.profilePicContainer{
+
+  width: 196px;
+    height: 280px;
+  background-color: white;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+    margin-top: -70px;
+    border-radius: 50%;
 }
 
 .profilePic{
 
   width: 170px;
-  height: 200px;
+  height: 110px;
 
-  background-image: url(assets/img/profile.jpg);
+  background-image: url(assets/img/noodle-soup.png);
   background-repeat: no-repeat;
   background-size: contain;
+  z-index: 2;
+  border-radius: 50%;
 
   
 
-  margin-top: -60px;
+  /* margin-top: -60px; */
 }
 
 .main-wrapper {
@@ -201,6 +218,23 @@ h1{
 
 
 }
+
+@media(max-width: 600px){
+
+  h1{
+    margin-left: 6px;
+  }
+
+  .ratings{
+    margin-left: 6px;
+  }
+
+  h2{
+    margin-left: 6px;
+  }
+    
+}
+
 
 
 

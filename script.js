@@ -10,12 +10,11 @@ function renderDishesGallery() {
 }
 
 function addMealtoCart(i) {
+  document.getElementById("orderedMeals").innerHTML = ""
   let addMealNameValue = meals[i].name;
   let addMealPriceValue = meals[i].price;
-
   let addMeal = { name: addMealNameValue, price: addMealPriceValue, amount: 1 };
   let newItem = true;
-
   for (let i = 0; i < cartItems.length; i++) {
     if (cartItems[i].name === addMeal.name) {
       cartItems[i].amount = cartItems[i].amount + 1;
@@ -26,19 +25,14 @@ function addMealtoCart(i) {
   if (newItem === true) {
     cartItems.push(addMeal);
   }
-
-  document.getElementById("orderedMeals").innerHTML =
-    orderedMealsTemplate(cartItems);
+  document.getElementById("orderedMeals").innerHTML = orderedMealsTemplate(cartItems);
   renderTotal(cartItems);
 }
 
 function increase(i) {
   cartItems[i].amount = cartItems[i].amount + 1;
   cartItems[i].price = meals[i].price * cartItems[i].amount;
-
-  document.getElementById("orderedMeals").innerHTML =
-    orderedMealsTemplate(cartItems);
-
+  document.getElementById("orderedMeals").innerHTML = orderedMealsTemplate(cartItems);
   renderTotal(cartItems);
 }
 
@@ -48,27 +42,23 @@ function decrease(i) {
     cartItems[i].amount = cartItems[i].amount - 1;
     cartItems[i].price = meals[i].price * cartItems[i].amount;
 
-    document.getElementById("orderedMeals").innerHTML =
-      orderedMealsTemplate(cartItems);
-
+    document.getElementById("orderedMeals").innerHTML = orderedMealsTemplate(cartItems);
     renderTotal(cartItems);
   }
 }
 
 function deleteItem(i) {
   cartItems.splice(i, 1);
-  console.log(cartItems);
-
   document.getElementById("orderedMeals").innerHTML =
-    orderedMealsTemplate(cartItems);
+  orderedMealsTemplate(cartItems);
   renderTotal(cartItems);
 }
 
-function on() {
+function OverlayOn() {
   document.getElementById("overlay").style.display = "block";
 }
 
-function off() {
+function OverlayOff() {
   document.getElementById("overlay").style.display = "none";
 } 
 
@@ -78,27 +68,25 @@ function off() {
     cartContentResponsive.innerHTML = cartContentNormal.innerHTML;
   }
 
-
   function renderFromResponsiveCartToCart(cartItems){
-
     document.getElementById("orderedMealsResponsive").innerHTML = ""
     
-    document.getElementById("orderedMeals").innerHTML =
-    orderedMealsTemplate(cartItems);
-  renderTotal(cartItems);
-
+    document.getElementById("orderedMeals").innerHTML = orderedMealsTemplate(cartItems);
+    renderTotal(cartItems);
   }
 
-
   function confirmOrder(i) {
-
     let totalPriceAfterOrder = 0
 
+    if (cartItems.length === 0) {     
+    }
+    else{
     document.getElementById("orderedMeals").innerHTML = ""
     document.getElementById("orderedMeals").innerHTML += confirmOrderRenderResponse()
     cartItems.splice(i, 1);
     
     document.getElementById("totalSum").innerHTML = "Gesamt: " + totalPriceAfterOrder.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'});  
     document.getElementById("orderBTN").innerHTML = "Gesamt: " + totalPriceAfterOrder.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'});     
+  }
   }
 

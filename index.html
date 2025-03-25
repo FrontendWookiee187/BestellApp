@@ -26,14 +26,18 @@
     </header>
 
     <div id="overlay" class="overlay" onload="mealsInResponsiveCart()">
-      <button class="overlayCloseBtn" onclick="off(); renderFromResponsiveCartToCart(cartItems)">X</button>
-        <div id="orderedMealsResponsive"></div>
+      <div class="closeBtnContainer">
+      <button class="overlayCloseBtn" onclick="OverlayOff(); renderFromResponsiveCartToCart(cartItems)"><img src="assets/img/x_close_icon_transparent.png" alt=""></button>
+      </div> 
+      <div id="orderedMealsResponsive"></div>
 
     </div>
 
     <div class="main-wrapper">
       <div id="hero-wrapper" class="hero-wrapper">
+        <div class="profilePicContainer">
         <div class="profilePic"></div>
+      </div>
         <div class="hero-pic"></div>
       </div>
 
@@ -50,7 +54,17 @@
       <div id="content-wrapper" class="content-wrapper">
         <div id="cart-container" class="cart-container">
           <div id="order" class="order">
-            <div id="orderedMeals" class="orderedMeals"></div>
+            <div id="orderedMeals" class="orderedMeals">
+
+              <div class="emptyCartContainer" id="emptyCartContainer">
+              <div class="emptyCart" id="emptyCart">
+
+                <img src="assets/img/cart-963.png" alt="">
+                <div class="emptyText" id="emptyText">Gäääähnende Leere hier...</div>
+              </div>
+            </div>
+
+            </div>
             <div id="totalSum" class="totalSum"></div>
 
             <div class="orderBTNContainer" id="orderBTNContainer">
@@ -60,7 +74,7 @@
           
         </div>
         <div id="dishes-container" class="dishes-container"></div>
-        <div id="responsiveBtn" class="responsiveBtn" onclick="on(); mealsInResponsiveCart(cartItems)">
+        <div id="responsiveBtn" class="responsiveBtn" onclick="OverlayOn(); mealsInResponsiveCart(cartItems)">
           <span>Warenkorb</span>
         </div>
       </div>

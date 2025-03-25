@@ -23,24 +23,16 @@ function orderedMealsTemplate(cartItems){
         cart +=  /*html*/`
         <div id="meal${i}" class="meal">
 
-            <button id="increase${i}" class="inDecrease" onclick="increase(${i})"><img src="assets/img/plus_icon_transparent.png" alt=""></button>
-
+            <button id="decrease${i}" class="inDecrease" onclick="decrease(${i})"><img src="assets/img/minus_icon_transparent.png" alt=""></button>   
             <div id="amountCounter${i}" class="amountCounter">${cartItems[i].amount}x</div>
-
-            <button id="decrease${i}" class="inDecrease" onclick="decrease(${i})"><img src="assets/img/minus_icon_transparent.png" alt=""></button>
-
+            <button id="increase${i}" class="inDecrease" onclick="increase(${i})"><img src="assets/img/plus_icon_transparent.png" alt=""></button>
             <div id="orderedMealWrapper" class="orderedMealWrapper">
-    
-            <div id="orderedMealName${i}" class="orderedMeal">${cartItems[i].name}</div>
-            <div id="orderedMealPrice${i}" class="orderedMeal">${cartItems[i].price.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'})}</div>
-    
+                <div id="orderedMealName${i}" class="orderedMeal">${cartItems[i].name}</div>
+                <div id="orderedMealPrice${i}" class="orderedMeal">${cartItems[i].price.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'})}</div>
             </div>
-
-            <button id="delteDish${i}" onclick="(deleteItem(${i}))" class="deleteBTN"><img src="assets/img/delete_forever_.png" alt=""></button>
-    
+            <button id="delteDish${i}" onclick="(deleteItem(${i}))" class="deleteBTN"><img src="assets/img/delete_forever_.png" alt=""></button>    
             </div>     `
             }
-
     return cart
 }
 
