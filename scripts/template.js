@@ -56,6 +56,18 @@ function renderTotal(cartItems){
 
 document.getElementById("totalSum").innerHTML = "Gesamt: " + totalPrice.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'});
 document.getElementById("responsiveBtn").innerHTML = "Warenkorb (" + totalPrice.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'})+ ")";
+document.getElementById("orderBTN").innerHTML = "Zahlungspflichtig bestellen (" + totalPrice.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'})+ ")";
+}
+
+function confirmOrderRenderResponse(){
+
+    return /*html*/`
+    <div class="orderConfirmationContainer" id="orderConfirmationContainer">
+        <div class="orderConfirmation" id="orderConfirmation">Vielen Dank für Ihre Bestellung. Sie werden zeitnah gesättigt!!!</div>
+        <div class="confirmationSmiley" id="confirmationSmiley"> <img src="assets/img/smiley_icon_transparent.png" alt=""></div>
+  
+  </div>
+  `
 }
 
 

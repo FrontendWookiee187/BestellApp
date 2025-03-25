@@ -89,3 +89,16 @@ function off() {
 
   }
 
+
+  function confirmOrder(i) {
+
+    let totalPriceAfterOrder = 0
+
+    document.getElementById("orderedMeals").innerHTML = ""
+    document.getElementById("orderedMeals").innerHTML += confirmOrderRenderResponse()
+    cartItems.splice(i, 1);
+    
+    document.getElementById("totalSum").innerHTML = "Gesamt: " + totalPriceAfterOrder.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'});  
+    document.getElementById("orderBTN").innerHTML = "Gesamt: " + totalPriceAfterOrder.toLocaleString("de-DE", {style: 'currency', currency: 'EUR'});     
+  }
+
