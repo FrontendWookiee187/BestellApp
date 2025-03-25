@@ -1,11 +1,8 @@
-html{
-    scroll-behavior: smooth;
-    font-family: 'Oswald';
-    
+html {
+  scroll-behavior: smooth;
+  font-family: "Oswald";
 }
 
-body{
-
-    margin: 0;
+body {
+  margin: 0;
 }
-

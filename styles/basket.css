@@ -1,100 +1,78 @@
-.order{
-    width: 100%;
-    height: 100vh;
+.order {
+  width: 100%;
+  height: 100vh;
 
-    
-
-    position: sticky;
-    top: 0;
+  position: sticky;
+  top: 0;
 }
 
+.orderedMeals {
+  width: 100%;
+  height: 500px;
 
-.orderedMeals{
-
-    width: 100%;
-    height: 500px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.totalSum{
-
-    width: 100%;
-    height: 100px;
-    margin-left: 8px;
+.totalSum {
+  width: 100%;
+  height: 100px;
+  margin-left: 8px;
 }
 
 .inDecrease {
+  display: contents;
+  cursor: pointer;
+}
 
-    display: contents;
-    cursor: pointer;
-  
-  
-  }
-  
-  .inDecrease img{
-  
-    width: 32px;
-    height: 32px;
-  
-  
-  }
-  
-  .deleteBTN {
-  
-    display: contents;
-    cursor: pointer;
-  
-  
-  }
-  
-  .deleteBTN img{
-  
-    width: 32px;
-    height: 32px;
-  
-  
-  }
+.inDecrease img {
+  width: 32px;
+  height: 32px;
+}
 
-  .cart-container {
-    min-height: calc(100vh - 200px);
-    width: 300px;
-    
-    box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.5);
+.deleteBTN {
+  display: contents;
+  cursor: pointer;
+}
 
-    border-radius: 6px;
-  }
+.deleteBTN img {
+  width: 32px;
+  height: 32px;
+}
 
-  .overlay{
+.cart-container {
+  min-height: calc(100vh - 200px);
+  width: 300px;
 
-    position: fixed;
-    display: none;
-    top: 0;
-    left: 0;
-    right: 0;
+  box-shadow: 0px 0px 3px 3px rgba(0, 0, 0, 0.5);
+
+  border-radius: 6px;
+}
+
+.overlay {
+  position: fixed;
+  display: none;
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
-    height: 100%;
-    width: 100%;
-    background-color: white;
-     z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  z-index: 2;
 
-    /* position: sticky;
-    top: 0; */  
+  /* position: sticky;
+    top: 0; */
 }
 
-
-.orderBTNContainer{
-
+.orderBTNContainer {
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 
-.orderBTN{
-
+.orderBTN {
   background-color: rgb(255, 165, 0);
   color: white;
   height: 36px;
@@ -102,119 +80,96 @@
   width: 95%;
 
   display: flex;
-    justify-content: center;
-    align-items: center;
+  justify-content: center;
+  align-items: center;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
-
-.orderConfirmationContainer{
+.orderConfirmationContainer {
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 
   flex-direction: column;
-    gap: 8px;
-
+  gap: 8px;
 }
 
-.orderConfirmation{
-
+.orderConfirmation {
   font-size: 24px;
   text-align: center;
 }
 
-
-.confirmationSmiley img{
-
+.confirmationSmiley img {
   width: 64px;
   height: 64px;
-
 }
 
-.overlayCloseBtn{
-
+.overlayCloseBtn {
   width: 36px;
   height: 36px;
   display: contents;
   cursor: pointer;
 }
 
-.overlayCloseBtn img{
-
+.overlayCloseBtn img {
   width: 36px;
   height: 36px;
 }
 
-.closeBtnContainer{
-
+.closeBtnContainer {
   display: flex;
   justify-content: flex-end;
 }
 
-.orderedMealWrapper{
-
+.orderedMealWrapper {
   display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 
-    width: 90px;
-    height: 60px;
+  width: 90px;
+  height: 60px;
 }
 
-.emptyCartContainer{
-
+.emptyCartContainer {
   display: flex;
-    justify-content: center;
-    text-align: center;
+  justify-content: center;
+  text-align: center;
 }
 
-.emptyCart{
-
+.emptyCart {
   display: flex;
-    flex-direction: column;
+  flex-direction: column;
 }
 
-.emptyCart img{
-
+.emptyCart img {
   width: 256px;
   height: 256px;
 }
 
-
-.emptyText{
+.emptyText {
   font-size: 24px;
 }
 
-  @media(max-width: 800px){
-
-    .cart-container {
-
-        display: none;
-    }
-
-    .content-wrapper {
-
-        justify-content: center;
-        justify-content: center;
-        flex-direction: column;
-        align-items: normal;
-    }
-
-    .responsiveBtn{
-        display: flex;
-        cursor: pointer;
-
-        position: fixed;
-        bottom: 0;
-      }
-
-     
-    
-    
+@media (max-width: 800px) {
+  .cart-container {
+    display: none;
   }
 
- 
+  .content-wrapper {
+    justify-content: center;
+    justify-content: center;
+    flex-direction: column;
+    align-items: normal;
+  }
+
+  .responsiveBtn {
+    display: flex;
+    cursor: pointer;
+
+    position: fixed;
+    bottom: 0;
+  }
+}

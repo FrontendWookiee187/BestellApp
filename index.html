@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="shortcut icon" href="assets/img/favico.webp" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="assets/img/favico.webp"
+      type="image/x-icon"
+    />
 
     <script src="scripts/template.js"></script>
     <script src="scripts/db.js"></script>
@@ -20,61 +24,71 @@
   </head>
   <body onload="init()">
     <header>
-
-      <img src="assets/img/favico.webp" alt="">
+      <img src="assets/img/favico.webp" alt="" />
       <span>Daniels Asia Restaurant</span>
     </header>
 
     <div id="overlay" class="overlay" onload="mealsInResponsiveCart()">
       <div class="closeBtnContainer">
-      <button class="overlayCloseBtn" onclick="OverlayOff(); renderFromResponsiveCartToCart(cartItems)"><img src="assets/img/x_close_icon_transparent.png" alt=""></button>
-      </div> 
+        <button
+          class="overlayCloseBtn"
+          onclick="OverlayOff(); renderFromResponsiveCartToCart(cartItems)"
+        >
+          <img src="assets/img/x_close_icon_transparent.png" alt="" />
+        </button>
+      </div>
       <div id="orderedMealsResponsive"></div>
-
     </div>
 
     <div class="main-wrapper">
       <div id="hero-wrapper" class="hero-wrapper">
         <div class="profilePicContainer">
-        <div class="profilePic"></div>
-      </div>
+          <div class="profilePic"></div>
+        </div>
         <div class="hero-pic"></div>
       </div>
 
       <h1>Daniels Asia Restaurant</h1>
       <div class="ratings">
-        <img src="assets/img/star.png" alt="">
-        <img src="assets/img/star.png" alt="">
-        <img src="assets/img/star.png" alt="">
-        <img src="assets/img/star.png" alt="">
-        <img src="assets/img/star_rate_half.png" alt="">
-        4,5 Sterne</div>
+        <img src="assets/img/star.png" alt="" />
+        <img src="assets/img/star.png" alt="" />
+        <img src="assets/img/star.png" alt="" />
+        <img src="assets/img/star.png" alt="" />
+        <img src="assets/img/star_rate_half.png" alt="" />
+        4,5 Sterne
+      </div>
       <h2>Hauptspeisen</h2>
 
       <div id="content-wrapper" class="content-wrapper">
         <div id="cart-container" class="cart-container">
           <div id="order" class="order">
             <div id="orderedMeals" class="orderedMeals">
-
               <div class="emptyCartContainer" id="emptyCartContainer">
-              <div class="emptyCart" id="emptyCart">
-
-                <img src="assets/img/cart-963.png" alt="">
-                <div class="emptyText" id="emptyText">Gäääähnende Leere hier...</div>
+                <div class="emptyCart" id="emptyCart">
+                  <img src="assets/img/cart-963.png" alt="" />
+                  <div class="emptyText" id="emptyText">
+                    Gäääähnende Leere hier...
+                  </div>
+                </div>
               </div>
-            </div>
-
             </div>
             <div id="totalSum" class="totalSum"></div>
 
             <div class="orderBTNContainer" id="orderBTNContainer">
-              <div class="orderBTN" id="orderBTN" onclick="confirmOrder()"></div>
-        </div>
+              <div
+                class="orderBTN"
+                id="orderBTN"
+                onclick="confirmOrder()"
+              ></div>
+            </div>
           </div>
-          
         </div>
         <div id="dishes-container" class="dishes-container"></div>
-        <div id="responsiveBtn" class="responsiveBtn" onclick="OverlayOn(); mealsInResponsiveCart(cartItems)">
+        <div
+          id="responsiveBtn"
+          class="responsiveBtn"
+          onclick="OverlayOn(); mealsInResponsiveCart(cartItems)"
+        >
           <span>Warenkorb</span>
         </div>
       </div>
