@@ -51,4 +51,14 @@
     font-weight: 700;
     src: url('../assets/fonts/oswald-v53-latin-700.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
   }
+
+  @font-face {
+    font-family: 'Karate';
+    src: url('Karate.woff2') format('woff2'),
+        url('Karate.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+    src: url('../assets/fonts/Karate.woff2') format('woff2');
+}
   

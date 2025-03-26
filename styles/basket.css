@@ -153,6 +153,11 @@
   font-size: 24px;
 }
 
+.responsiveBtnContainer{
+  display: flex;
+      justify-content: center;
+}
+
 @media (max-width: 800px) {
   .cart-container {
     display: none;

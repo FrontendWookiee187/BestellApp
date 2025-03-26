@@ -10,8 +10,6 @@ header {
   gap: 16px;
   margin-left: 2.5%;
   margin-right: 2.5%;
-
-  font-family: "Karate";
 }
 
 header img {
@@ -19,7 +17,7 @@ header img {
 }
 
 .hero-wrapper {
-  width: 100%;
+  width: 95%;
   height: 500px;
 
   display: flex;
@@ -30,7 +28,7 @@ header img {
 }
 
 .hero-pic {
-  width: 95%;
+  width: 100%;
   height: 960px;
 
   background-image: url(assets/img/hero.jpg);
@@ -84,6 +82,8 @@ header img {
   margin-left: 8px;
   margin-right: 8px;
   margin-bottom: 24px;
+
+  /* width: 75%; */
 }
 
 .dishes-container {
@@ -189,6 +189,13 @@ h1 {
 
 .dish:hover {
   background-color: rgba(255, 166, 0, 0.5);
+}
+
+.cartWrapper{
+
+  min-height: calc(100vh - 200px);
+  background-color: blue;
+  width: 100px;
 }
 
 @media (max-width: 600px) {
